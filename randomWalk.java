@@ -13,6 +13,8 @@ public class randomWalk {
         Ellipse circle = new Ellipse(150, 150, 10, 10);
         circle.setColor(Color.GREEN);
         circle.fill();
+        try {Thread.sleep(1000);}
+        catch(Exception ex) {};
     }
     public static void main(String args[])
     {
