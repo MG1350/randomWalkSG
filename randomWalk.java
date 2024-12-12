@@ -7,11 +7,10 @@ public class randomWalk {
         yCord = 150;
         Rectangle box = new Rectangle(0, 0, 300, 300);
         box.draw();
-        Ellipse border = new Ellipse(100, 100, 100, 100);
-        border.setColor(Color.RED);
-        border.fill(); 
+        Ellipse border = new Ellipse(50, 50, 200, 200);
+        border.draw();
         Ellipse circle = new Ellipse(150, 150, 10, 10);
-        circle.setColor(Color.GREEN);
+        circle.setColor(Color.RED);
         circle.fill();
         try {Thread.sleep(1000);}
         catch(Exception ex) {};
