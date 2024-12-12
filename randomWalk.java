@@ -1,10 +1,6 @@
 public class randomWalk {
-    private int xCord;
-    private int yCord;
     public randomWalk()
     {
-        xCord = 150;
-        yCord = 150;
         Rectangle box = new Rectangle(0, 0, 300, 300);
         box.draw();
         Ellipse border = new Ellipse(50, 50, 200, 200);
