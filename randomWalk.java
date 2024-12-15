@@ -8,13 +8,25 @@ public class randomWalk {
         Ellipse circle = new Ellipse(150, 150, 10, 10);
         circle.setColor(Color.RED);
         circle.fill();
-
-        while(circle.getX() >= 50 && circle.getX() <= 250 && circle.getY() <= 250 && circle.getY() >= 50)
-        {
-            int rand = (int) (Math.random()*21) - 10;
+        int steps = 0;
+        while (true) {
+            steps++;
+            int ranX = (int) (Math.random() * 21) - 10;
+            int ranY = (int) (Math.random() * 21) - 10;
+            circle.translate(ranX, ranY);
+            double x = circle.getX() + 5;
+            double y = circle.getY() + 5;
+            double distance = Math.sqrt(Math.pow(x - 150, 2) + Math.pow(y - 150, 2));
+            if (distance > 100) {
+                break;
+            }
+            try {
+                Thread.sleep(100);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
-        try {Thread.sleep(1000);}
-        catch(Exception ex) {};
+        System.out.println("Escaped in " + steps + " steps.");
     }
     public static void main(String args[])
     {
